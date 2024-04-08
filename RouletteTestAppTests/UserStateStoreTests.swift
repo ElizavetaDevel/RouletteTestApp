@@ -84,7 +84,7 @@ class UserStateStoreTests: XCTestCase {
         let newDaysInstalled = 5
         let newPrizeTaken = Prize.fire.rawValue
         
-        await userStateStore.set(installDate: newInstallDate, daysInstalled: newDaysInstalled, prizeTaken: newPrizeTaken)
+        await userStateStore.set(installDate: newInstallDate, daysInstalled: newDaysInstalled, prizeTaken: newPrizeTaken, updatePrize: true)
         
         XCTAssertEqual(mockStorageService.storage["userStateKey"] as? UserState,
                        UserState(installDate: newInstallDate, daysInstalled: newDaysInstalled, prizeTaken: newPrizeTaken))
@@ -98,7 +98,7 @@ class UserStateStoreTests: XCTestCase {
         let newDaysInstalled = 5
         let newPrizeTaken: Int? = nil
         
-        await userStateStore.set(installDate: newInstallDate, daysInstalled: newDaysInstalled, prizeTaken: newPrizeTaken)
+        await userStateStore.set(installDate: newInstallDate, daysInstalled: newDaysInstalled, prizeTaken: newPrizeTaken, updatePrize: true)
         
         XCTAssertEqual(mockStorageService.storage["userStateKey"] as? UserState,
                        UserState(installDate: newInstallDate, daysInstalled: newDaysInstalled, prizeTaken: newPrizeTaken))
