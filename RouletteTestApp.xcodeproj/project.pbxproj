@@ -1,0 +1,784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		222559812BC3EBEE00C1FDEA /* RouletteTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559802BC3EBEE00C1FDEA /* RouletteTestAppApp.swift */; };
+		222559832BC3EBEE00C1FDEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559822BC3EBEE00C1FDEA /* ContentView.swift */; };
+		222559852BC3EBF000C1FDEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222559842BC3EBF000C1FDEA /* Assets.xcassets */; };
+		222559882BC3EBF000C1FDEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222559872BC3EBF000C1FDEA /* Preview Assets.xcassets */; };
+		222559922BC3EBF000C1FDEA /* RouletteTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559912BC3EBF000C1FDEA /* RouletteTestAppTests.swift */; };
+		2225599C2BC3EBF000C1FDEA /* RouletteTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225599B2BC3EBF000C1FDEA /* RouletteTestAppUITests.swift */; };
+		2225599E2BC3EBF000C1FDEA /* RouletteTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225599D2BC3EBF000C1FDEA /* RouletteTestAppUITestsLaunchTests.swift */; };
+		222559B42BC3ED7000C1FDEA /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559B32BC3ED7000C1FDEA /* StorageService.swift */; };
+		222559B72BC3ED7C00C1FDEA /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559B52BC3ED7C00C1FDEA /* UserDefaultsService.swift */; };
+		222559B82BC3ED7C00C1FDEA /* DependencySerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559B62BC3ED7C00C1FDEA /* DependencySerivce.swift */; };
+		222559BC2BC3EDB000C1FDEA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 222559BB2BC3EDB000C1FDEA /* Swinject */; };
+		222559BE2BC3EDB000C1FDEA /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 222559BD2BC3EDB000C1FDEA /* Swinject-Dynamic */; };
+		222559BF2BC3EDB000C1FDEA /* Swinject-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 222559BD2BC3EDB000C1FDEA /* Swinject-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		222559C22BC3EDCD00C1FDEA /* UserDefaultsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559C12BC3EDCD00C1FDEA /* UserDefaultsServiceTests.swift */; };
+		222559C52BC3F97800C1FDEA /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559C42BC3F97800C1FDEA /* Prize.swift */; };
+		222559C92BC40C5200C1FDEA /* RouletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559C82BC40C5200C1FDEA /* RouletteViewModel.swift */; };
+		222559CB2BC40CE100C1FDEA /* RouletteWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559CA2BC40CE100C1FDEA /* RouletteWheel.swift */; };
+		222559CD2BC40E8100C1FDEA /* PointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559CC2BC40E8100C1FDEA /* PointerView.swift */; };
+		222559D02BC4184D00C1FDEA /* UserStateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559CF2BC4184D00C1FDEA /* UserStateStore.swift */; };
+		222559D22BC4185B00C1FDEA /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559D12BC4185B00C1FDEA /* UserState.swift */; };
+		222559D42BC4199400C1FDEA /* RouletteCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559D32BC4199400C1FDEA /* RouletteCase.swift */; };
+		222559D82BC420E300C1FDEA /* UserStateStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559D72BC420E300C1FDEA /* UserStateStoreTests.swift */; };
+		222559DA2BC4241000C1FDEA /* MockStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559D92BC4241000C1FDEA /* MockStorageService.swift */; };
+		222559DD2BC4277600C1FDEA /* RouletteCaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559DC2BC4277600C1FDEA /* RouletteCaseStore.swift */; };
+		222559DF2BC428F300C1FDEA /* RouletteCaseStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559DE2BC428F300C1FDEA /* RouletteCaseStoreTests.swift */; };
+		222559E12BC42C9700C1FDEA /* GenericStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559E02BC42C9700C1FDEA /* GenericStore.swift */; };
+		222559E32BC43DC000C1FDEA /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559E22BC43DC000C1FDEA /* RouletteView.swift */; };
+		222559E52BC444C900C1FDEA /* MainDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559E42BC444C900C1FDEA /* MainDebugView.swift */; };
+		222559E72BC4453800C1FDEA /* MainDebugViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222559E62BC4453800C1FDEA /* MainDebugViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2225598E2BC3EBF000C1FDEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222559752BC3EBEE00C1FDEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2225597C2BC3EBEE00C1FDEA;
+			remoteInfo = RouletteTestApp;
+		};
+		222559982BC3EBF000C1FDEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222559752BC3EBEE00C1FDEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2225597C2BC3EBEE00C1FDEA;
+			remoteInfo = RouletteTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		222559C02BC3EDB000C1FDEA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				222559BF2BC3EDB000C1FDEA /* Swinject-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2225597D2BC3EBEE00C1FDEA /* RouletteTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouletteTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		222559802BC3EBEE00C1FDEA /* RouletteTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteTestAppApp.swift; sourceTree = "<group>"; };
+		222559822BC3EBEE00C1FDEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		222559842BC3EBF000C1FDEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		222559872BC3EBF000C1FDEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2225598D2BC3EBF000C1FDEA /* RouletteTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouletteTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		222559912BC3EBF000C1FDEA /* RouletteTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteTestAppTests.swift; sourceTree = "<group>"; };
+		222559972BC3EBF000C1FDEA /* RouletteTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouletteTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2225599B2BC3EBF000C1FDEA /* RouletteTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteTestAppUITests.swift; sourceTree = "<group>"; };
+		2225599D2BC3EBF000C1FDEA /* RouletteTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		222559B32BC3ED7000C1FDEA /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		222559B52BC3ED7C00C1FDEA /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		222559B62BC3ED7C00C1FDEA /* DependencySerivce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencySerivce.swift; sourceTree = "<group>"; };
+		222559C12BC3EDCD00C1FDEA /* UserDefaultsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceTests.swift; sourceTree = "<group>"; };
+		222559C42BC3F97800C1FDEA /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
+		222559C82BC40C5200C1FDEA /* RouletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewModel.swift; sourceTree = "<group>"; };
+		222559CA2BC40CE100C1FDEA /* RouletteWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteWheel.swift; sourceTree = "<group>"; };
+		222559CC2BC40E8100C1FDEA /* PointerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerView.swift; sourceTree = "<group>"; };
+		222559CF2BC4184D00C1FDEA /* UserStateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateStore.swift; sourceTree = "<group>"; };
+		222559D12BC4185B00C1FDEA /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
+		222559D32BC4199400C1FDEA /* RouletteCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteCase.swift; sourceTree = "<group>"; };
+		222559D72BC420E300C1FDEA /* UserStateStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateStoreTests.swift; sourceTree = "<group>"; };
+		222559D92BC4241000C1FDEA /* MockStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageService.swift; sourceTree = "<group>"; };
+		222559DC2BC4277600C1FDEA /* RouletteCaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteCaseStore.swift; sourceTree = "<group>"; };
+		222559DE2BC428F300C1FDEA /* RouletteCaseStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteCaseStoreTests.swift; sourceTree = "<group>"; };
+		222559E02BC42C9700C1FDEA /* GenericStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStore.swift; sourceTree = "<group>"; };
+		222559E22BC43DC000C1FDEA /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
+		222559E42BC444C900C1FDEA /* MainDebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDebugView.swift; sourceTree = "<group>"; };
+		222559E62BC4453800C1FDEA /* MainDebugViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDebugViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2225597A2BC3EBEE00C1FDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222559BC2BC3EDB000C1FDEA /* Swinject in Frameworks */,
+				222559BE2BC3EDB000C1FDEA /* Swinject-Dynamic in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2225598A2BC3EBF000C1FDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222559942BC3EBF000C1FDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		222559742BC3EBEE00C1FDEA = {
+			isa = PBXGroup;
+			children = (
+				2225597F2BC3EBEE00C1FDEA /* RouletteTestApp */,
+				222559902BC3EBF000C1FDEA /* RouletteTestAppTests */,
+				2225599A2BC3EBF000C1FDEA /* RouletteTestAppUITests */,
+				2225597E2BC3EBEE00C1FDEA /* Products */,
+				222559BA2BC3EDB000C1FDEA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2225597E2BC3EBEE00C1FDEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2225597D2BC3EBEE00C1FDEA /* RouletteTestApp.app */,
+				2225598D2BC3EBF000C1FDEA /* RouletteTestAppTests.xctest */,
+				222559972BC3EBF000C1FDEA /* RouletteTestAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2225597F2BC3EBEE00C1FDEA /* RouletteTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				222559B22BC3ED4D00C1FDEA /* Protocols */,
+				222559B12BC3ED4400C1FDEA /* Services */,
+				222559CE2BC4127200C1FDEA /* Stores */,
+				222559C32BC3F2CA00C1FDEA /* Models */,
+				222559C72BC40C2600C1FDEA /* ViewModels */,
+				222559C62BC40C1900C1FDEA /* Views */,
+				222559802BC3EBEE00C1FDEA /* RouletteTestAppApp.swift */,
+				222559822BC3EBEE00C1FDEA /* ContentView.swift */,
+				222559842BC3EBF000C1FDEA /* Assets.xcassets */,
+				222559862BC3EBF000C1FDEA /* Preview Content */,
+			);
+			path = RouletteTestApp;
+			sourceTree = "<group>";
+		};
+		222559862BC3EBF000C1FDEA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				222559872BC3EBF000C1FDEA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		222559902BC3EBF000C1FDEA /* RouletteTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				222559DB2BC4243800C1FDEA /* Mocks */,
+				222559912BC3EBF000C1FDEA /* RouletteTestAppTests.swift */,
+				222559C12BC3EDCD00C1FDEA /* UserDefaultsServiceTests.swift */,
+				222559D72BC420E300C1FDEA /* UserStateStoreTests.swift */,
+				222559DE2BC428F300C1FDEA /* RouletteCaseStoreTests.swift */,
+			);
+			path = RouletteTestAppTests;
+			sourceTree = "<group>";
+		};
+		2225599A2BC3EBF000C1FDEA /* RouletteTestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2225599B2BC3EBF000C1FDEA /* RouletteTestAppUITests.swift */,
+				2225599D2BC3EBF000C1FDEA /* RouletteTestAppUITestsLaunchTests.swift */,
+			);
+			path = RouletteTestAppUITests;
+			sourceTree = "<group>";
+		};
+		222559B12BC3ED4400C1FDEA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				222559B62BC3ED7C00C1FDEA /* DependencySerivce.swift */,
+				222559B52BC3ED7C00C1FDEA /* UserDefaultsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		222559B22BC3ED4D00C1FDEA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				222559B32BC3ED7000C1FDEA /* StorageService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		222559BA2BC3EDB000C1FDEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		222559C32BC3F2CA00C1FDEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				222559C42BC3F97800C1FDEA /* Prize.swift */,
+				222559D12BC4185B00C1FDEA /* UserState.swift */,
+				222559D32BC4199400C1FDEA /* RouletteCase.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		222559C62BC40C1900C1FDEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				222559CA2BC40CE100C1FDEA /* RouletteWheel.swift */,
+				222559CC2BC40E8100C1FDEA /* PointerView.swift */,
+				222559E22BC43DC000C1FDEA /* RouletteView.swift */,
+				222559E42BC444C900C1FDEA /* MainDebugView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		222559C72BC40C2600C1FDEA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				222559C82BC40C5200C1FDEA /* RouletteViewModel.swift */,
+				222559E62BC4453800C1FDEA /* MainDebugViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		222559CE2BC4127200C1FDEA /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				222559E02BC42C9700C1FDEA /* GenericStore.swift */,
+				222559CF2BC4184D00C1FDEA /* UserStateStore.swift */,
+				222559DC2BC4277600C1FDEA /* RouletteCaseStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		222559DB2BC4243800C1FDEA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				222559D92BC4241000C1FDEA /* MockStorageService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2225597C2BC3EBEE00C1FDEA /* RouletteTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222559A12BC3EBF000C1FDEA /* Build configuration list for PBXNativeTarget "RouletteTestApp" */;
+			buildPhases = (
+				222559792BC3EBEE00C1FDEA /* Sources */,
+				2225597A2BC3EBEE00C1FDEA /* Frameworks */,
+				2225597B2BC3EBEE00C1FDEA /* Resources */,
+				222559C02BC3EDB000C1FDEA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RouletteTestApp;
+			packageProductDependencies = (
+				222559BB2BC3EDB000C1FDEA /* Swinject */,
+				222559BD2BC3EDB000C1FDEA /* Swinject-Dynamic */,
+			);
+			productName = RouletteTestApp;
+			productReference = 2225597D2BC3EBEE00C1FDEA /* RouletteTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2225598C2BC3EBF000C1FDEA /* RouletteTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222559A42BC3EBF000C1FDEA /* Build configuration list for PBXNativeTarget "RouletteTestAppTests" */;
+			buildPhases = (
+				222559892BC3EBF000C1FDEA /* Sources */,
+				2225598A2BC3EBF000C1FDEA /* Frameworks */,
+				2225598B2BC3EBF000C1FDEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2225598F2BC3EBF000C1FDEA /* PBXTargetDependency */,
+			);
+			name = RouletteTestAppTests;
+			productName = RouletteTestAppTests;
+			productReference = 2225598D2BC3EBF000C1FDEA /* RouletteTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		222559962BC3EBF000C1FDEA /* RouletteTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222559A72BC3EBF000C1FDEA /* Build configuration list for PBXNativeTarget "RouletteTestAppUITests" */;
+			buildPhases = (
+				222559932BC3EBF000C1FDEA /* Sources */,
+				222559942BC3EBF000C1FDEA /* Frameworks */,
+				222559952BC3EBF000C1FDEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222559992BC3EBF000C1FDEA /* PBXTargetDependency */,
+			);
+			name = RouletteTestAppUITests;
+			productName = RouletteTestAppUITests;
+			productReference = 222559972BC3EBF000C1FDEA /* RouletteTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		222559752BC3EBEE00C1FDEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					2225597C2BC3EBEE00C1FDEA = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					2225598C2BC3EBF000C1FDEA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 2225597C2BC3EBEE00C1FDEA;
+					};
+					222559962BC3EBF000C1FDEA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 2225597C2BC3EBEE00C1FDEA;
+					};
+				};
+			};
+			buildConfigurationList = 222559782BC3EBEE00C1FDEA /* Build configuration list for PBXProject "RouletteTestApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 222559742BC3EBEE00C1FDEA;
+			packageReferences = (
+				222559B92BC3ED9D00C1FDEA /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
+			productRefGroup = 2225597E2BC3EBEE00C1FDEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2225597C2BC3EBEE00C1FDEA /* RouletteTestApp */,
+				2225598C2BC3EBF000C1FDEA /* RouletteTestAppTests */,
+				222559962BC3EBF000C1FDEA /* RouletteTestAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2225597B2BC3EBEE00C1FDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222559882BC3EBF000C1FDEA /* Preview Assets.xcassets in Resources */,
+				222559852BC3EBF000C1FDEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2225598B2BC3EBF000C1FDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222559952BC3EBF000C1FDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		222559792BC3EBEE00C1FDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222559D02BC4184D00C1FDEA /* UserStateStore.swift in Sources */,
+				222559C92BC40C5200C1FDEA /* RouletteViewModel.swift in Sources */,
+				222559CD2BC40E8100C1FDEA /* PointerView.swift in Sources */,
+				222559C52BC3F97800C1FDEA /* Prize.swift in Sources */,
+				222559E72BC4453800C1FDEA /* MainDebugViewModel.swift in Sources */,
+				222559D22BC4185B00C1FDEA /* UserState.swift in Sources */,
+				222559E52BC444C900C1FDEA /* MainDebugView.swift in Sources */,
+				222559B72BC3ED7C00C1FDEA /* UserDefaultsService.swift in Sources */,
+				222559832BC3EBEE00C1FDEA /* ContentView.swift in Sources */,
+				222559B42BC3ED7000C1FDEA /* StorageService.swift in Sources */,
+				222559812BC3EBEE00C1FDEA /* RouletteTestAppApp.swift in Sources */,
+				222559D42BC4199400C1FDEA /* RouletteCase.swift in Sources */,
+				222559B82BC3ED7C00C1FDEA /* DependencySerivce.swift in Sources */,
+				222559E12BC42C9700C1FDEA /* GenericStore.swift in Sources */,
+				222559DD2BC4277600C1FDEA /* RouletteCaseStore.swift in Sources */,
+				222559E32BC43DC000C1FDEA /* RouletteView.swift in Sources */,
+				222559CB2BC40CE100C1FDEA /* RouletteWheel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222559892BC3EBF000C1FDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222559C22BC3EDCD00C1FDEA /* UserDefaultsServiceTests.swift in Sources */,
+				222559922BC3EBF000C1FDEA /* RouletteTestAppTests.swift in Sources */,
+				222559DF2BC428F300C1FDEA /* RouletteCaseStoreTests.swift in Sources */,
+				222559D82BC420E300C1FDEA /* UserStateStoreTests.swift in Sources */,
+				222559DA2BC4241000C1FDEA /* MockStorageService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222559932BC3EBF000C1FDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2225599E2BC3EBF000C1FDEA /* RouletteTestAppUITestsLaunchTests.swift in Sources */,
+				2225599C2BC3EBF000C1FDEA /* RouletteTestAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2225598F2BC3EBF000C1FDEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2225597C2BC3EBEE00C1FDEA /* RouletteTestApp */;
+			targetProxy = 2225598E2BC3EBF000C1FDEA /* PBXContainerItemProxy */;
+		};
+		222559992BC3EBF000C1FDEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2225597C2BC3EBEE00C1FDEA /* RouletteTestApp */;
+			targetProxy = 222559982BC3EBF000C1FDEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2225599F2BC3EBF000C1FDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		222559A02BC3EBF000C1FDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		222559A22BC3EBF000C1FDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RouletteTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PXDLD6LFYP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizaalekseeva.RouletteTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		222559A32BC3EBF000C1FDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RouletteTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PXDLD6LFYP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizaalekseeva.RouletteTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		222559A52BC3EBF000C1FDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PXDLD6LFYP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizaalekseeva.RouletteTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RouletteTestApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RouletteTestApp";
+			};
+			name = Debug;
+		};
+		222559A62BC3EBF000C1FDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PXDLD6LFYP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizaalekseeva.RouletteTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RouletteTestApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RouletteTestApp";
+			};
+			name = Release;
+		};
+		222559A82BC3EBF000C1FDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PXDLD6LFYP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizaalekseeva.RouletteTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RouletteTestApp;
+			};
+			name = Debug;
+		};
+		222559A92BC3EBF000C1FDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PXDLD6LFYP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizaalekseeva.RouletteTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RouletteTestApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		222559782BC3EBEE00C1FDEA /* Build configuration list for PBXProject "RouletteTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2225599F2BC3EBF000C1FDEA /* Debug */,
+				222559A02BC3EBF000C1FDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222559A12BC3EBF000C1FDEA /* Build configuration list for PBXNativeTarget "RouletteTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222559A22BC3EBF000C1FDEA /* Debug */,
+				222559A32BC3EBF000C1FDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222559A42BC3EBF000C1FDEA /* Build configuration list for PBXNativeTarget "RouletteTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222559A52BC3EBF000C1FDEA /* Debug */,
+				222559A62BC3EBF000C1FDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222559A72BC3EBF000C1FDEA /* Build configuration list for PBXNativeTarget "RouletteTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222559A82BC3EBF000C1FDEA /* Debug */,
+				222559A92BC3EBF000C1FDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		222559B92BC3ED9D00C1FDEA /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		222559BB2BC3EDB000C1FDEA /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 222559B92BC3ED9D00C1FDEA /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		222559BD2BC3EDB000C1FDEA /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 222559B92BC3ED9D00C1FDEA /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 222559752BC3EBEE00C1FDEA /* Project object */;
+}
