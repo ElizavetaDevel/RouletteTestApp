@@ -14,7 +14,7 @@ struct MainDebugView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("День установки: \(viewModel.installationDay ?? 0)")
+                Text("День установки: \(viewModel.daysInstalled ?? 0)")
                     .padding()
                 
                 Button(action: {
@@ -62,7 +62,7 @@ struct MainDebugView: View {
                         await viewModel.onAppear()
                     }
                 }
-                .navigationBarBackButtonHidden(true), isActive:  $viewModel.isNextDay) {
+                .navigationBarBackButtonHidden(true), isActive:  $viewModel.canPlayRoulette) {
                     EmptyView()
                 }
                 .disabled(true)
