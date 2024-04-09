@@ -17,8 +17,8 @@ struct RouletteTestAppApp: App {
     init() {
         DependencySerivce.shared.registerOnAppStart()
         
-        rouletteCaseStore = RouletteCaseStore(storage: DependencySerivce.shared.resolve(StorageService.self))
-        userStateStore = UserStateStore(storage: DependencySerivce.shared.resolve(StorageService.self))
+        rouletteCaseStore = RouletteCaseStore()
+        userStateStore = UserStateStore()
         
         createRouletteCase()
         updateUserState()

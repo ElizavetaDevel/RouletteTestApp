@@ -79,38 +79,20 @@ struct RouletteView: View {
             
             Spacer()
         }
-        .sheet(isPresented: $showRejectWarning, onDismiss: {
-            if !viewModel.rejectSelected {
-                Task {
-                    await viewModel.getPrize()
+        .alert(isPresented: $showRejectWarning) {
+            Alert(
+                title: Text("Отказаться от подарка навсегда?"),
+                primaryButton: .default(Text("Да")) {
+                    presentationMode.wrappedValue.dismiss()
+                },
+                secondaryButton: .cancel(Text("Нет")) {
+                    Task {
+                        await viewModel.getPrize()
+                    }
                     presentationMode.wrappedValue.dismiss()
                 }
-            } else {
-                presentationMode.wrappedValue.dismiss()
-            }
-        }) {
-            RejectModalView(viewModel: viewModel)
+            )
         }
-    }
-}
-
-struct RejectModalView: View {
-    @ObservedObject var viewModel: RouletteViewModel
-    @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
-    
-    var body: some View {
-        VStack {
-            Text("Отказаться от подарка навсегда?")
-            Button("Да") {
-                viewModel.rejectSelected = true
-                presentationMode.wrappedValue.dismiss()
-            }
-            Button("Нет") {
-                viewModel.rejectSelected = false
-                presentationMode.wrappedValue.dismiss()
-            }
-        }
-        .padding()
     }
 }
 

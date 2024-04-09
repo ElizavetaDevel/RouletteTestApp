@@ -13,8 +13,8 @@ class MainDebugViewModel: ObservableObject {
     
     //MARK: - Properties
     
-    let userStateStore = UserStateStore(storage: DependencySerivce.shared.resolve(StorageService.self))
-    let rouletteCaseStore = RouletteCaseStore(storage: DependencySerivce.shared.resolve(StorageService.self))
+    let userStateStore = UserStateStore()
+    let rouletteCaseStore = RouletteCaseStore()
     
     private(set) var rouletteCase: RouletteCase?
     private(set) var userState: UserState? {

@@ -12,7 +12,7 @@ class RouletteViewModel: ObservableObject {
     
     //MARK: - Properties
     
-    let userStateStore = UserStateStore(storage: DependencySerivce.shared.resolve(StorageService.self))
+    let userStateStore = UserStateStore()
     
     let rouletteCase: RouletteCase?
     let prizes: [Prize] = Prize.allCases
@@ -22,7 +22,6 @@ class RouletteViewModel: ObservableObject {
     @Published var spinning = false
     @Published var gamePlayed = false
     @Published var rotationDegrees = 0.0
-    @Published var rejectSelected = false
     
     //MARK: - Initialization
     
