@@ -60,7 +60,7 @@ struct RouletteView: View {
                     
                     Button(action: {
                         Task {
-                            showRejectWarning = await viewModel.rejectPrize()
+                            showRejectWarning = await viewModel.checkIfRejectToShow()
                             if !showRejectWarning {
                                 presentationMode.wrappedValue.dismiss()
                             }

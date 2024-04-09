@@ -12,7 +12,7 @@ class RouletteViewModel: ObservableObject {
     
     //MARK: - Properties
     
-    let userStateStore = UserStateStore()
+    let userStateStore: UserStateStore
     
     let rouletteCase: RouletteCase?
     let prizes: [Prize] = Prize.allCases
@@ -25,7 +25,8 @@ class RouletteViewModel: ObservableObject {
     
     //MARK: - Initialization
     
-    init(selectedPrize: Prize, rouletteCase: RouletteCase?) {
+    init(selectedPrize: Prize, rouletteCase: RouletteCase?, userStateStore: UserStateStore = UserStateStore()) {
+        self.userStateStore = userStateStore
         self.selectedPrize = selectedPrize
         self.rouletteCase = rouletteCase
         self.animationDuration = prizes.count + selectedPrize.rawValue
@@ -56,12 +57,12 @@ class RouletteViewModel: ObservableObject {
         await userStateStore.set(prizeTaken: selectedPrize.rawValue, updatePrize: true)
     }
     
-    func rejectPrize() async -> Bool {
+    func checkIfRejectToShow() async -> Bool {
         guard let userState = await userStateStore.get() else {
             return false
         }
         
-        return userState.daysInstalled == (rouletteCase?.prizeForDay.count ?? 0) - 1
+        return userState.daysInstalled >= (rouletteCase?.prizeForDay.count ?? 0) - 1
     }
     
 }
