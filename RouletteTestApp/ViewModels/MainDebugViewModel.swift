@@ -80,8 +80,6 @@ class MainDebugViewModel: ObservableObject {
     
     func onAppear() async {
         userState = await userStateStore.get()
-        daysInstalledState = userState?.daysInstalled
-        prizeTakenState = userState?.prizeTaken != nil ? Prize(rawValue: userState!.prizeTaken!) : nil
     }
     
     func startNextDay() async {
